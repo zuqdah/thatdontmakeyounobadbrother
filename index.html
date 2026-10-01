@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>That Don't Make You No Bad Brother</title>
+<meta name="description" content="Something's on the way. Check back soon.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#14110f">
+<meta property="og:title" content="That Don't Make You No Bad Brother">
+<meta property="og:description" content="Something's on the way. Check back soon.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314110f'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-style='italic' text-anchor='middle' fill='%23e8a54b'%3Eb%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,800;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #14110f;
+    --ink: #f3ebe1;
+    --muted: #a39686;
+    --accent: #e8a54b;
+    --rule: rgba(243, 235, 225, 0.14);
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; }
+  body {
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 110%, rgba(232, 165, 75, 0.16), transparent 70%),
+      var(--bg);
+    color: var(--ink);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 0 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    align-self: center;
+    justify-self: center;
+    max-width: 920px;
+    width: 100%;
+    padding: 64px 0 48px;
+    text-align: center;
+  }
+  .cover {
+    display: block;
+    width: min(240px, 60vw);
+    margin: 0 auto 40px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px var(--rule), 0 24px 60px -20px rgba(232, 165, 75, 0.35);
+    transition: transform 0.2s ease;
+  }
+  .cover:hover { transform: translateY(-3px); }
+  .cover img { display: block; width: 100%; height: auto; }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 36px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 0 rgba(232, 165, 75, 0.6);
+    animation: pulse 2.4s ease-out infinite;
+  }
+  h1 {
+    font-family: Fraunces, Georgia, serif;
+    font-weight: 800;
+    font-size: clamp(2.6rem, 9vw, 6.2rem);
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+  h1 em {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--accent);
+  }
+  .rule {
+    width: 56px;
+    height: 1px;
+    background: var(--rule);
+    margin: 40px auto;
+  }
+  p.lede {
+    font-family: Fraunces, Georgia, serif;
+    font-size: clamp(1.1rem, 2.6vw, 1.35rem);
+    line-height: 1.5;
+    color: var(--muted);
+    max-width: 30ch;
+    margin: 0 auto;
+  }
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 20px 0 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: var(--muted);
+    max-width: 920px;
+    width: 100%;
+    justify-self: center;
+  }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(232, 165, 75, 0.55); }
+    70%  { box-shadow: 0 0 0 10px rgba(232, 165, 75, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(232, 165, 75, 0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .eyebrow::before { animation: none; }
+    .cover { transition: none; }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <a class="cover" href="https://www.youtube.com/@NightcapShow_" target="_blank" rel="noopener">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/f3/40/d9/f340d949-5194-e491-e03e-3c1eda5da6d4/mza_6236218219405892976.jpg/600x600bb.jpg"
+           alt="Nightcap podcast cover art — Shannon Sharpe and Chad &quot;Ochocinco&quot; Johnson" width="600" height="600">
+    </a>
+    <div class="eyebrow">Coming soon</div>
+    <h1>That don’t make you <em>no bad</em> brother.</h1>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="lede">Something’s on the way. Pull up a chair &mdash; we’ll be ready shortly.</p>
+  </main>
+  <footer>
+    <span>thatdontmakeyounobadbrother.com</span>
+    <span>&copy; <span id="y">2026</span></span>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
