@@ -101,6 +101,30 @@
     max-width: 30ch;
     margin: 0 auto;
   }
+  .clips { margin-top: 64px; }
+  .clips h2 {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  .clip-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .clip {
+    width: min(280px, 100%);
+    aspect-ratio: 9 / 16;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 0 0 1px var(--rule), 0 24px 60px -24px rgba(232, 165, 75, 0.3);
+  }
+  .clip iframe { display: block; width: 100%; height: 100%; border: 0; }
   footer {
     border-top: 1px solid var(--rule);
     padding: 20px 0 24px;
@@ -135,6 +159,17 @@
     <h1>That don’t make you <em>no bad</em> brother.</h1>
     <div class="rule" aria-hidden="true"></div>
     <p class="lede">Something’s on the way. Pull up a chair &mdash; we’ll be ready shortly.</p>
+    <section class="clips" aria-label="Clips from Nightcap">
+      <h2>Straight from Nightcap</h2>
+      <div class="clip-row">
+        <div class="clip">
+          <iframe src="https://www.youtube-nocookie.com/embed/Ba8-3AiB0Ys" title="Nightcap: that don’t make you no bad brotha (flag on the play)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="clip">
+          <iframe src="https://www.youtube-nocookie.com/embed/AQYSYUXaDN0" title="Nightcap: that don’t make you no bad brotha (Iso on deck)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
   </main>
   <footer>
     <span>thatdontmakeyounobadbrother.com</span>
