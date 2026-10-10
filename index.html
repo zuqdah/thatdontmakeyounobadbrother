@@ -125,6 +125,7 @@
     box-shadow: 0 0 0 1px var(--rule), 0 24px 60px -24px rgba(232, 165, 75, 0.3);
   }
   .clip iframe { display: block; width: 100%; height: 100%; border: 0; }
+  .clip-note { font-size: 13px; color: var(--muted); margin-top: 14px; }
   footer {
     border-top: 1px solid var(--rule);
     padding: 20px 0 24px;
@@ -163,18 +164,24 @@
       <h2>Straight from Nightcap</h2>
       <div class="clip-row">
         <div class="clip">
-          <iframe src="https://www.youtube-nocookie.com/embed/Ba8-3AiB0Ys" title="Nightcap: that don’t make you no bad brotha (flag on the play)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="clip">
-          <iframe src="https://www.youtube-nocookie.com/embed/AQYSYUXaDN0" title="Nightcap: that don’t make you no bad brotha (Iso on deck)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <!-- One player for both Shorts: playlist + loop plays them in turn, and a viewer who unmutes stays unmuted across clips. Browsers only allow muted autoplay. -->
+          <iframe id="clips-player" src="https://www.youtube-nocookie.com/embed/Ba8-3AiB0Ys?autoplay=1&amp;mute=1&amp;playlist=Ba8-3AiB0Ys,AQYSYUXaDN0&amp;loop=1&amp;playsinline=1&amp;rel=0" title="Nightcap clips: that don’t make you no bad brotha" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
+      <p class="clip-note">Tap the speaker for sound</p>
     </section>
   </main>
   <footer>
     <span>thatdontmakeyounobadbrother.com</span>
     <span>&copy; <span id="y">2026</span></span>
   </footer>
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    // Respect reduced-motion: keep the player, drop the autoplay.
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      var p = document.getElementById("clips-player");
+      p.src = p.src.replace("autoplay=1", "autoplay=0");
+    }
+  </script>
 </body>
 </html>
